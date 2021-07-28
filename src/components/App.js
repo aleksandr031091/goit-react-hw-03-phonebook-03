@@ -30,7 +30,11 @@ class App extends Component {
       return alert(`${name} is already in contacts`);
     }
 
-    if (this.state.contacts.find((contact) => contact.number === number)) {
+    if (
+      this.state.contacts.find(
+        (contact) => contact.number.toUpperCase() === number.toUpperCase()
+      )
+    ) {
       return alert(`${number} is already in contacts`);
     }
 
